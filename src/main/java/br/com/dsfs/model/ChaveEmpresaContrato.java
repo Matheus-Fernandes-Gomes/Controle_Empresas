@@ -14,13 +14,13 @@ public class ChaveEmpresaContrato implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private String empresacnpj; // Campo correspondente a EMPRESACNPJ
-    private int contratocontrato; // Campo correspondente a CONTRATOCONTRATO
+    private Integer contratocontrato; // Campo correspondente a CONTRATOCONTRATO
 
     // Construtor padrão
     public ChaveEmpresaContrato() {}
 
     // Construtor completo
-    public ChaveEmpresaContrato(String empresacnpj, int contratocontrato) {
+    public ChaveEmpresaContrato(String empresacnpj, Integer contratocontrato) {
         this.empresacnpj = empresacnpj;
         this.contratocontrato = contratocontrato;
     }
@@ -34,11 +34,11 @@ public class ChaveEmpresaContrato implements Serializable {
         this.empresacnpj = empresacnpj;
     }
 
-    public int getContratocontrato() {
+    public Integer getContratocontrato() {
         return contratocontrato;
     }
 
-    public void setContratocontrato(int contratocontrato) {
+    public void setContratocontrato(Integer contratocontrato) {
         this.contratocontrato = contratocontrato;
     }
 

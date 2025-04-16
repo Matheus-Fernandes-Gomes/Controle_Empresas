@@ -1,5 +1,6 @@
 package br.com.dsfs.model;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -33,8 +34,8 @@ public class Empresa {
 	
 	@NotNull
 	@Size(max = 10)
-	@Column(name = "QTD_FUNCIONARIOS")
-	private int qtd_funcionarios;
+	@Column(name = "QTDFUNCIONARIOS")
+	private Integer qtdFuncionarios;
 	
 	@NotNull
 	@Size(max = 255)
@@ -53,14 +54,14 @@ public class Empresa {
 	
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name = "ID_endereco")
+	@JoinColumn(name = "ID_ENDERECO")
 	private Endereco endereco;
 
 	public Empresa(
 			@NotNull String cnpj, 
 			@NotNull @Size(max = 255) String nome, 
 			@NotNull @Size(max = 255) String email,
-			@NotNull @Size(max = 10) int qtd_funcionarios,
+			@NotNull @Size(max = 10) Integer qtdFuncionarios,
 			@NotNull @Size(max = 255) String tipo,
 			@NotNull @Size(max = 255) String ramo,
 			@NotNull @Size(max = 255) String descricao,
@@ -69,7 +70,7 @@ public class Empresa {
 		this.cnpj = cnpj;
 		this.nome = nome;
 		this.email = email;
-		this.qtd_funcionarios = qtd_funcionarios;
+		this.qtdFuncionarios = qtdFuncionarios;
 		this.tipo = tipo;
 		this.ramo = ramo;
 		this.descricao = descricao;
@@ -100,12 +101,12 @@ public class Empresa {
 		this.email = email;
 	}
 
-	public int getQtd_funcionarios() {
-		return qtd_funcionarios;
+	public Integer getQtdFuncionarios() {
+		return qtdFuncionarios;
 	}
 
-	public void setQtd_funcionarios(int qtd_funcionarios) {
-		this.qtd_funcionarios = qtd_funcionarios;
+	public void setQtdFuncionarios(Integer qtdFuncionarios) {
+		this.qtdFuncionarios = qtdFuncionarios;
 	}
 
 	public String getTipo() {
@@ -139,6 +140,8 @@ public class Empresa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+
+
 	
 	
 
